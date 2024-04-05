@@ -6,7 +6,7 @@
 /*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:37:37 by jcardina          #+#    #+#             */
-/*   Updated: 2024/04/04 18:47:03 by jcardina         ###   ########.fr       */
+/*   Updated: 2024/04/05 20:21:37 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <string>
 #include <iomanip>
 
-class Contact
+class	Contact
 {
 private:
 	std::string	_fname;
@@ -32,11 +32,14 @@ private:
 	std::string	get_nickname();
 	std::string	get_number();
 	std::string	get_darkestsecret();
-	void		set_value(std::string str);
+	std::string	set_value(std::string str);
+	std::string	print_len(std::string str);
 
 public:
 	Contact();
-	void	init(void);
+	void	init(int i);
+	void	print(void);
+
 	~Contact();
 };
 

@@ -6,13 +6,15 @@
 #    By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/02 13:21:43 by jcardina          #+#    #+#              #
-#    Updated: 2024/04/02 13:27:51 by jcardina         ###   ########.fr        #
+#    Updated: 2024/04/05 20:56:54 by jcardina         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = PhoneBook
 
-SRC = megaphone.cpp
+SRC = Contact.cpp main.cpp PhoneBook.cpp
+
+HEADERS = Contact.hpp PhoneBook.hpp
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -20,8 +22,10 @@ CC = g++
 
 OBJ = $(SRC:%.cpp=%.o)
 
-all: $(OBJ)
+$(NAME): $(OBJ) $(HEADERS)
 	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
+
+all: $(NAME)
 
 clean:
 	rm -f $(OBJ)
