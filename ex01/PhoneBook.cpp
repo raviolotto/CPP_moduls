@@ -33,8 +33,11 @@ void PhoneBook::printContacts(void)
 {
 	int i = 0;
 	std::cout << "===================  ALL YOUR  CONTACTS  ===================" << std::endl;
-	while (i++ < 8)
+	while (i < 8)
+	{
 		this->book[i].print();
+		i++;
+	}
 	std::cout << std::endl;
 }
 

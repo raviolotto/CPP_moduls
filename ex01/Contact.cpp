@@ -86,7 +86,6 @@ void	Contact::print(void)
 	std::cout << "|" << std::left << std::setw(10) << this->print_len(this->_lname);
 	std::cout << "|" << std::left << std::setw(10) << this->print_len(this->_nickname);
 	std::cout << "|" << std::left << std::setw(10) << this->print_len(this->_number);
-	std::cout << "|" << std::left << std::setw(10) << this->print_len(this->_darkestsecret);
 	std::cout << "|" << std::endl;
 }
 
