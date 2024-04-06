@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/02 13:21:43 by jcardina          #+#    #+#              #
-#    Updated: 2024/04/06 15:21:49 by jcardina         ###   ########.fr        #
+#    Created: 2024/04/06 14:45:48 by jcardina          #+#    #+#              #
+#    Updated: 2024/04/06 15:45:03 by jcardina         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = zombiez
 
-SRC = megaphone.cpp
+SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -32,5 +32,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
-
