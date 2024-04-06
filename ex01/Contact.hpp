@@ -6,7 +6,7 @@
 /*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:37:37 by jcardina          #+#    #+#             */
-/*   Updated: 2024/04/05 20:21:37 by jcardina         ###   ########.fr       */
+/*   Updated: 2024/04/06 11:57:30 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,8 @@ private:
 	std::string	_nickname;
 	std::string	_number;
 	std::string	_darkestsecret;
-	int			index;
+	int	index;
 
-	std::string	get_fname();
-	std::string	get_lname();
-	std::string	get_nickname();
-	std::string	get_number();
-	std::string	get_darkestsecret();
 	std::string	set_value(std::string str);
 	std::string	print_len(std::string str);
 

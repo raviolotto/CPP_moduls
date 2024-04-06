@@ -6,7 +6,7 @@
 /*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 19:55:17 by jcardina          #+#    #+#             */
-/*   Updated: 2024/04/05 20:57:11 by jcardina         ###   ########.fr       */
+/*   Updated: 2024/04/06 11:56:35 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void PhoneBook::addContact(void)
 void PhoneBook::printContacts(void)
 {
 	int i = 0;
-	std::cout << "===================  ALL YOUR  CONTACTS  ===================" << std::endl;
+	std::cout << "================  ALL YOUR  CONTACTS  ================" << std::endl;
 	while (i < 8)
 	{
 		this->book[i].print();

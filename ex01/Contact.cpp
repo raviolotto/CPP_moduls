@@ -6,7 +6,7 @@
 /*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 14:52:04 by jcardina          #+#    #+#             */
-/*   Updated: 2024/04/05 20:33:34 by jcardina         ###   ########.fr       */
+/*   Updated: 2024/04/06 13:30:34 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,26 +18,6 @@ Contact::Contact()
 
 Contact::~Contact()
 {
-}
-
-std::string Contact::get_fname()
-{
-	return(this->_fname);
-}
-
-std::string Contact::get_lname()
-{
-	return(this->_lname);
-}
-
-std::string Contact::get_nickname()
-{
-	return(this->_number);
-}
-
-std::string Contact::get_darkestsecret()
-{
-	return(this->_darkestsecret);
 }
 
 std::string Contact::set_value(std::string str)

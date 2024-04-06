@@ -3,18 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+         #
+#    By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/05 23:55:21 by jacopo            #+#    #+#              #
-#    Updated: 2024/04/05 23:55:25 by jacopo           ###   ########.fr        #
+#    Updated: 2024/04/06 12:45:14 by jcardina         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = PhoneBook
+NAME = Account
 
-SRC = Contact.cpp main.cpp PhoneBook.cpp
+SRC = Account.cpp tests.cpp
 
-HEADERS = Contact.hpp PhoneBook.hpp
+HEADERS = Account.hpp
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
