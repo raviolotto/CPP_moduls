@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/06 18:11:50 by jcardina          #+#    #+#             */
-/*   Updated: 2024/04/06 20:37:28 by jcardina         ###   ########.fr       */
+/*   Created: 2024/04/06 20:39:03 by jcardina          #+#    #+#             */
+/*   Updated: 2024/04/06 21:37:11 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include <string>
+#include <iostream>
+#include "MySed.hpp"
 
-int main()
+int main(int ac, char **av)
 {
+	if (ac != 4)
 	{
-		Weapon club = Weapon("crude spiked club");
-
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
+		std::cerr << "looks like you insert a bad imput" << std::endl;
+		std::cerr << "use this: ./rep <filename> <to_find> <replace>.";
+		return (1);
 	}
+	else
 	{
-		Weapon club = Weapon("crude spiked club");
-
-		HumanB jim("Jim");
-		jim.setWeapon(&club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
+		MySed sev(av[1]);
+		sev.replace(av[2], av[3]);
 	}
-
-return 0;
+	return (0);
 }

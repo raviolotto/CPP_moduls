@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   MySed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/06 18:34:59 by jcardina          #+#    #+#             */
-/*   Updated: 2024/04/06 20:36:17 by jcardina         ###   ########.fr       */
+/*   Created: 2024/04/06 20:55:11 by jcardina          #+#    #+#             */
+/*   Updated: 2024/04/06 21:12:30 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_H
-#define HUMANB_H
+#ifndef MYSED_HPP
+#define MYSED_HPP
 
-#include "Weapon.hpp"
+#include <iostream>
+#include <string>
+#include <fstream>
 
-class HumanB
+class MySed
 {
 private:
-	Weapon*			_weapon;
-	std::string		_name;
+	std::string	_inFile;
+	std::string	_outFile;
 
 public:
-	HumanB(std::string name);
-	void	setWeapon(Weapon* newWeapon);
-	void	attack();
-	~HumanB();
+	MySed(std::string name);
+	~MySed();
+
+	void	replace(std::string s1, std::string s2);
 };
 
 
