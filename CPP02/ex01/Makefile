@@ -6,11 +6,11 @@
 #    By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/06 14:45:48 by jcardina          #+#    #+#              #
-#    Updated: 2024/04/08 22:41:42 by jacopo           ###   ########.fr        #
+#    Updated: 2024/04/08 22:41:37 by jacopo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Fixed00
+NAME = Fixed01
 
 SRC = main.cpp Fixed.cpp
 
