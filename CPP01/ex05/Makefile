@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+         #
+#    By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/06 14:45:48 by jcardina          #+#    #+#              #
-#    Updated: 2024/04/06 21:51:18 by jcardina         ###   ########.fr        #
+#    Updated: 2024/04/08 11:07:53 by jacopo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = rep
+NAME = Harl
 
-SRC = main.cpp MySed.cpp
+SRC = main.cpp Harl.cpp
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
