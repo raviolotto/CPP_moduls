@@ -6,7 +6,7 @@
 /*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 14:52:04 by jcardina          #+#    #+#             */
-/*   Updated: 2024/04/06 13:30:34 by jcardina         ###   ########.fr       */
+/*   Updated: 2024/04/08 17:32:22 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ std::string Contact::set_value(std::string str)
 {
 	std::string value = "";
 	bool	good = false;
-
 	do
 	{
 		std::cout <<str <<std::endl;
@@ -43,6 +42,7 @@ std::string Contact::set_value(std::string str)
 void Contact::init(int i)
 {
 	this->index = i;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	this->_fname = this->set_value("insert your name");
 	this->_lname = this->set_value("insert your last name");
 	this->_nickname = this->set_value("insert nickname pls");

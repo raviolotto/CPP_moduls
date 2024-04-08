@@ -6,7 +6,7 @@
 /*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 19:55:17 by jcardina          #+#    #+#             */
-/*   Updated: 2024/04/06 11:56:35 by jcardina         ###   ########.fr       */
+/*   Updated: 2024/04/08 17:44:24 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 PhoneBook::PhoneBook()
 {
 	this->_lastindex = 0;
+	this->_forPrint = 0;
 }
 
 PhoneBook::~PhoneBook()
@@ -27,13 +28,16 @@ void PhoneBook::addContact(void)
 	 this->_lastindex = 0;
 	this->book[this->_lastindex].init(this->_lastindex);
 	this->_lastindex ++;
+	if(this->_forPrint != 8)
+		this->_forPrint ++;
 }
 
 void PhoneBook::printContacts(void)
 {
 	int i = 0;
-	std::cout << "================  ALL YOUR  CONTACTS  ================" << std::endl;
-	while (i < 8)
+	std::cout << "================  ALL YOUR  CONTACTS  ==================" << std::endl;
+	std::cout << "|index     | name     | Sname    | nickname | number   |" << std::endl;
+	while (i < this->_forPrint)
 	{
 		this->book[i].print();
 		i++;
@@ -49,7 +53,7 @@ int PhoneBook::_lookingfor(void)
 	do{
 		std::cout << "insert contact index" << std::endl;
 		std::cin >>ret;
-		if(ret >= 0 && ret <= 8)
+		if(ret >= 0 && ret < this->_forPrint)
 			good = true;
 		else
 		{

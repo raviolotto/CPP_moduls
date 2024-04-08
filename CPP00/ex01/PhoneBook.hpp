@@ -6,7 +6,7 @@
 /*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 19:49:58 by jcardina          #+#    #+#             */
-/*   Updated: 2024/04/05 20:42:26 by jcardina         ###   ########.fr       */
+/*   Updated: 2024/04/08 17:39:53 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class PhoneBook
 private:
 	Contact	book[8];
 	int		_lastindex;
+	int		_forPrint;
 	int		_lookingfor(void);
 
 public:

@@ -6,7 +6,7 @@
 /*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:37:37 by jcardina          #+#    #+#             */
-/*   Updated: 2024/04/06 11:57:30 by jcardina         ###   ########.fr       */
+/*   Updated: 2024/04/08 16:39:01 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <limits>
 
 class	Contact
 {
