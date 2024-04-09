@@ -6,12 +6,11 @@
 /*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 22:09:12 by jacopo            #+#    #+#             */
-/*   Updated: 2024/04/08 23:01:58 by jacopo           ###   ########.fr       */
+/*   Updated: 2024/04/09 13:31:29 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <cmath>
 
 Fixed::Fixed()
 {
@@ -35,6 +34,7 @@ Fixed::Fixed(const int value)
 Fixed::Fixed(const float value)
 {
 	std::cout << "float constructor called" << std::endl;
+	this->_fixedPoint = roundf(value * (1 << _frBits));
 }
 
 Fixed::~Fixed()
@@ -58,3 +58,20 @@ Fixed& Fixed::operator=( const Fixed &rhs ) {
 		this->_fixedPoint = rhs.getRawBits();
 	return *this;
 }
+
+float Fixed::toFloat( void ) const
+{
+	return  static_cast<float> (this->_fixedPoint) / (1 << this->_frBits);
+}
+
+int Fixed::toInt(void) const
+{
+	return this->_fixedPoint >> this->_frBits;
+}
+
+std::ostream & operator<<( std::ostream & ost, Fixed const & i )
+{
+	ost << i.toFloat();
+	return ost;
+}
+
