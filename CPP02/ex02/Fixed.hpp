@@ -6,7 +6,7 @@
 /*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 22:09:39 by jacopo            #+#    #+#             */
-/*   Updated: 2024/04/09 15:42:57 by jacopo           ###   ########.fr       */
+/*   Updated: 2024/04/09 18:42:02 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,33 @@ public:
 	//overload
 	Fixed& operator=( const Fixed &rhs );
 
+	bool	operator>(const Fixed & rhs) const;
+	bool	operator>=(const Fixed & rhs) const;
+	bool	operator<(const Fixed & rhs) const;
+	bool	operator<=(const Fixed & rhs) const;
+	bool	operator==(const Fixed & rhs) const;
+	bool	operator!=(const Fixed & rhs) const;
+
+	Fixed	operator+(const Fixed & rhs) const;
+	Fixed	operator-(const Fixed & rhs) const;
+	Fixed	operator*(const Fixed & rhs) const;
+	Fixed	operator/(const Fixed & rhs) const;
+
+	Fixed&	operator++(void); //pre-increment
+	Fixed	operator++(int); //post-increment
+	Fixed&	operator--(void);
+	Fixed	operator--(int);
+
+
 	//others
 	void	setRawBits( int const raw );
 	int		getRawBits( void ) const;
 	int		toInt( void ) const;
 	float	toFloat( void ) const;
+	static Fixed& min( Fixed &a, Fixed &b );
+	static const Fixed& min( const Fixed &a, const Fixed &b );
+	static Fixed& max( Fixed &a, Fixed &b );
+	static const Fixed& max( const Fixed &a, const Fixed &b );
 
 }; //
 
