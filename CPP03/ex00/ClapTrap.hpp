@@ -6,7 +6,7 @@
 /*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 20:01:31 by jacopo            #+#    #+#             */
-/*   Updated: 2024/04/10 12:07:19 by jacopo           ###   ########.fr       */
+/*   Updated: 2024/04/10 12:35:48 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ public:
 	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap & rhs);
 	~ClapTrap();
+
+	ClapTrap &operator=(const ClapTrap& rhs);
 
 	void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);

@@ -6,7 +6,7 @@
 /*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 20:01:22 by jacopo            #+#    #+#             */
-/*   Updated: 2024/04/10 12:31:18 by jacopo           ###   ########.fr       */
+/*   Updated: 2024/04/10 12:40:32 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,12 @@ ClapTrap::~ClapTrap()
 
 void ClapTrap::attack(const std::string& target)
 {
-	if(this->_energyPoints > 0)
+	if(this->_hitPoints <= 0)
+	{
+		std::cout << this->_name  << " is dead" << std::endl;
+		return;
+	}
+	else if(this->_energyPoints > 0)
 	{
 		this->_energyPoints -= 1;
 		std::cout << "cucciola " << this->_name << " attaks " << target << ", causing " << this->_attackDamage << " points of damage!" << std::endl;
@@ -61,6 +66,11 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
+	if(this->_hitPoints <= 0)
+	{
+		std::cout << this->_name  << " is dead" << std::endl;
+		return;
+	}
 	if(this->_energyPoints > 0)
 	{
 		this->_energyPoints -= 1;
@@ -69,4 +79,13 @@ void ClapTrap::beRepaired(unsigned int amount)
 	}
 	else
 		std::cout << this->_name << " is too tired even to heal" << std::endl;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap& rhs)
+{
+	this->_name = rhs._name;
+	this->_hitPoints = rhs._hitPoints;
+	this->_energyPoints = rhs._energyPoints;
+	this->_attackDamage = rhs._attackDamage;
+	return *this;
 }

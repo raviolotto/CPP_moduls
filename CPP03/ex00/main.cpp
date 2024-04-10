@@ -6,7 +6,7 @@
 /*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 20:36:50 by jacopo            #+#    #+#             */
-/*   Updated: 2024/04/10 12:21:51 by jacopo           ###   ########.fr       */
+/*   Updated: 2024/04/10 12:42:12 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,11 @@ int main(void)
 		c2.takeDamage(2);
 		c1.beRepaired(1);
 	}
+
+	ClapTrap c3(c1);
+	c3.attack("burro");
+	c3 = c2;
+	c3.attack("gatto");
+	
 	return(0);
 }
