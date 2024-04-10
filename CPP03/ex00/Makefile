@@ -6,11 +6,11 @@
 #    By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/06 14:45:48 by jcardina          #+#    #+#              #
-#    Updated: 2024/04/09 20:00:59 by jacopo           ###   ########.fr        #
+#    Updated: 2024/04/10 12:11:44 by jacopo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Fixed02
+NAME = ClapTrap00
 
 SRC = main.cpp ClapTrap.cpp
 
