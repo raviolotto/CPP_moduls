@@ -6,13 +6,13 @@
 #    By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/06 14:45:48 by jcardina          #+#    #+#              #
-#    Updated: 2024/04/11 12:24:13 by jacopo           ###   ########.fr        #
+#    Updated: 2024/04/11 12:57:02 by jacopo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ScavTrap01
+NAME = FragTrap02
 
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MySed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 21:01:33 by jcardina          #+#    #+#             */
-/*   Updated: 2024/04/06 21:50:15 by jcardina         ###   ########.fr       */
+/*   Updated: 2024/04/11 10:58:40 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,31 +51,4 @@ void MySed::replace(std::string dafind, std::string replace)
 		file.close();
 	}
 }
-
-// void MySed::replace(std::string dafind, std::string replace) {
-//     std::ifstream inFile(this->_inFile.c_str());
-//     if (!inFile.is_open()) {
-//         std::cout << "Impossibile aprire il file" << std::endl;
-//         return;
-//     }
-
-//     std::ofstream outFile(this->_outFile);
-//     if (!outFile.is_open()) {
-//         std::cout << "Impossibile creare il file di output" << std::endl;
-//         return;
-//     }
-
-//     std::string line;
-//     while (std::getline(inFile, line)) {
-//         size_t pos = line.find(dafind);
-//         while (pos != std::string::npos) {
-//             line.replace(pos, dafind.length(), replace);
-//             pos = line.find(dafind, pos + replace.length());
-//         }
-//         outFile << line << std::endl;
-//     }
-
-//     inFile.close();
-//     outFile.close();
-// }
 
