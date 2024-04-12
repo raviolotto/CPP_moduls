@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 11:31:08 by jacopo            #+#    #+#             */
-/*   Updated: 2024/04/12 13:16:19 by jacopo           ###   ########.fr       */
+/*   Updated: 2024/04/12 18:41:43 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 
 Cat::Cat( void ) : Animal("Cat")
 {
+	this->_brain = new Brain();
 	std::cout << this->type << " constructor MIAOOO" << std::endl;
 }
 
 Cat::~Cat( void )
 {
+	delete this->_brain;
 	std::cout << this->type << " destructor RONF RONF" << std::endl;
 }
 

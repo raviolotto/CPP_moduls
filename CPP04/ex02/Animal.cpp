@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 10:32:43 by jacopo            #+#    #+#             */
-/*   Updated: 2024/04/12 11:21:41 by jacopo           ###   ########.fr       */
+/*   Updated: 2024/04/12 18:47:00 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,6 @@ Animal& Animal::operator=(const Animal& rhs)
 std::string Animal::getType(void) const
 {
 	return this->type;
-}
-
-void Animal::makeSound(void) const
-{
-	std::cout << "indistinct animal sounds" << std::endl;
 }
 
 

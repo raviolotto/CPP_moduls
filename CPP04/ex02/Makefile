@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+         #
+#    By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 10:18:14 by jacopo            #+#    #+#              #
-#    Updated: 2024/04/12 13:19:18 by jacopo           ###   ########.fr        #
+#    Updated: 2024/04/12 18:39:41 by jcardina         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Brainmorphism
+NAME = Puremorphism
 
 SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp Brain.cpp
 
