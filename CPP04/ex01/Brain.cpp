@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:49:48 by jacopo            #+#    #+#             */
-/*   Updated: 2024/04/12 13:32:13 by jacopo           ###   ########.fr       */
+/*   Updated: 2024/04/12 19:47:17 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Brain::Brain()
 
 Brain::Brain(const Brain & rhs)
 {
+	std::cout << "brain copied" << std::endl;
 	*this = rhs;
 }
 
