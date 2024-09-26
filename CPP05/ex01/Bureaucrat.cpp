@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jacopo <jcardina@student.42roma.it>        +#+  +:+       +#+        */
+/*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 11:38:38 by jacopo            #+#    #+#             */
-/*   Updated: 2024/06/01 13:59:25 by jacopo           ###   ########.fr       */
+/*   Updated: 2024/09/26 16:04:05 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,17 @@ void Bureaucrat::downgrading(){
 		throw Bureaucrat::GradeTooLowException();
 	else
 		_grade++;
+}
+
+void Bureaucrat::signForm(Form& form)
+{
+	try{
+		form.beSigned(*this);
+		std::cout << "signed " << form.getName() << std::endl;
+	}
+	catch (Form::GradeTooLowException &e){
+		std::cout << this->_name << " is too dumb to sign form " << form.getName() << " cause " << e.what() << std::endl;
+	}
 }
 
 //overload

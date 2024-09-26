@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 10:28:51 by jacopo            #+#    #+#             */
-/*   Updated: 2024/09/18 16:26:21 by jcardina         ###   ########.fr       */
+/*   Updated: 2024/09/26 15:35:23 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 #include <string>
 #include <iostream>
+#include "Form.hpp"
 
+class Form;
 
 class Bureaucrat
 {
@@ -35,6 +37,8 @@ public:
 	int			getGrade();
 	void		promotion();
 	void 		downgrading();
+	void		signForm(Form& form);
+
 
 
 	class GradeTooLowException : public std::exception
@@ -45,7 +49,7 @@ public:
 				return("grade too low");
 			}
 	};
-	
+
 	class GradeTooHighException : public std::exception
 	{
 		public:

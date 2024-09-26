@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jacopo <jcardina@student.42roma.it>        +#+  +:+       +#+         #
+#    By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 10:18:14 by jacopo            #+#    #+#              #
-#    Updated: 2024/05/31 10:28:37 by jacopo           ###   ########.fr        #
+#    Updated: 2024/09/26 14:19:56 by jacopo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Bureaucrat
+NAME = Bureaucrat01
 
-SRC = main.cpp Bureaucrat.cpp
+SRC = main.cpp Bureaucrat.cpp Form.cpp
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
