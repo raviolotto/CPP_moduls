@@ -17,19 +17,19 @@
 
 int main()
 {
+
 	Bureaucrat carmine("Carmine", 26);
+	Bureaucrat carminuccio("carminuccio", 150);
 	ShrubberyCreationForm leVele("test");
-	std::cout << leVele << std::endl;
-	std::cout << carmine << std::endl;
+	ShrubberyCreationForm leVele2("hard");
+	ShrubberyCreationForm leVele3(leVele2);
+	std::cout << leVele3.getTarget() << std::endl;
 	carmine.signForm(leVele);
-	std::cout << leVele << std::endl;
+	carmine.executeForm(leVele2);
 	carmine.executeForm(leVele);
-
-
-
-
-
-
+	carminuccio.signForm(leVele2);
+	carmine.signForm(leVele2);
+	carminuccio.executeForm(leVele2);
 
 
 	return 0;

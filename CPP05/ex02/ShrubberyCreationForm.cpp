@@ -32,8 +32,9 @@ ShrubberyCreationForm::~ShrubberyCreationForm(){
 
 void ShrubberyCreationForm::execute(const Bureaucrat& bureaucrat) const
 {
-    if(this->getStatus() == false)
+    if(this->getStatus() == false){
         throw AForm::NotSignedExeption();
+    }
     else if(bureaucrat.getGrade() > this->getGradeToExecute())
         throw AForm::GradeTooLowException();
 

@@ -12,7 +12,7 @@
 
 NAME = Bureaucrat02
 
-SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp
+SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
