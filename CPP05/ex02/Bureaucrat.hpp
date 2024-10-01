@@ -34,10 +34,11 @@ public:
 	~Bureaucrat();
 
 	std::string	getName();
-	int			getGrade();
+	int			getGrade() const;
 	void		promotion();
 	void 		downgrading();
 	void		signForm(AForm& form);
+	void		executeForm(AForm const & form);
 
 
 

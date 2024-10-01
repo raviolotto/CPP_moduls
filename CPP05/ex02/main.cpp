@@ -12,23 +12,25 @@
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 
 int main()
 {
-	AForm cheatcontract;
-	std::cout << cheatcontract << std::endl;
-	AForm contract("caterina", 72, 91);
-	std::cout << contract << std::endl;
-
 	Bureaucrat carmine("Carmine", 26);
+	ShrubberyCreationForm leVele("test");
+	std::cout << leVele << std::endl;
 	std::cout << carmine << std::endl;
-	carmine.signForm(contract);
-	std::cout << contract << std::endl;
+	carmine.signForm(leVele);
+	std::cout << leVele << std::endl;
+	carmine.executeForm(leVele);
 
-	AForm contract2("Laila", 24, 150);
-	carmine.signForm(contract2);
-	std::cout << contract2 << std::endl;
+
+
+
+
+
+
 
 	return 0;
 }

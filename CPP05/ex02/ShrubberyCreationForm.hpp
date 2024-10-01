@@ -20,11 +20,13 @@
 class ShrubberyCreationForm : public AForm
 {
 private:
+	std::string _target;
 	ShrubberyCreationForm();
 public:
 	ShrubberyCreationForm(std::string target);
 	ShrubberyCreationForm(const ShrubberyCreationForm& orig);
 	~ShrubberyCreationForm();
+	std::string getTarget() const;
 
 	ShrubberyCreationForm& operator=(ShrubberyCreationForm& rhs);
 	void execute(const Bureaucrat& bureaucrat) const;
