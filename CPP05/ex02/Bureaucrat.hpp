@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 10:28:51 by jacopo            #+#    #+#             */
-/*   Updated: 2024/09/26 15:35:23 by jacopo           ###   ########.fr       */
+/*   Updated: 2024/10/01 13:00:43 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 #include <string>
 #include <iostream>
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -37,7 +37,7 @@ public:
 	int			getGrade();
 	void		promotion();
 	void 		downgrading();
-	void		signForm(Form& form);
+	void		signForm(AForm& form);
 
 
 

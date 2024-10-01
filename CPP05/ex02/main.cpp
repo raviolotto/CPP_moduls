@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 13:52:47 by jacopo            #+#    #+#             */
-/*   Updated: 2024/09/26 16:02:52 by jacopo           ###   ########.fr       */
+/*   Updated: 2024/10/01 13:01:52 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 
 int main()
 {
-	Form cheatcontract;
+	AForm cheatcontract;
 	std::cout << cheatcontract << std::endl;
-	Form contract("caterina", 72, 91);
+	AForm contract("caterina", 72, 91);
 	std::cout << contract << std::endl;
 
 	Bureaucrat carmine("Carmine", 26);
@@ -26,7 +26,7 @@ int main()
 	carmine.signForm(contract);
 	std::cout << contract << std::endl;
 
-	Form contract2("Laila", 24, 150);
+	AForm contract2("Laila", 24, 150);
 	carmine.signForm(contract2);
 	std::cout << contract2 << std::endl;
 
