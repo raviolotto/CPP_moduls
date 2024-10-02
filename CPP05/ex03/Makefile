@@ -6,13 +6,13 @@
 #    By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 10:18:14 by jacopo            #+#    #+#              #
-#    Updated: 2024/10/02 10:52:06 by jcardina         ###   ########.fr        #
+#    Updated: 2024/10/02 13:45:50 by jcardina         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Bureaucrat02
+NAME = Bureaucrat03
 
-SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 

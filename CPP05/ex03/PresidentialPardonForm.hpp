@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcardina <jcardina@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: raviolotto <raviolotto@student.42.fr>      #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 13:27:31 by jcardina          #+#    #+#             */
-/*   Updated: 2024/10/02 10:48:33 by jcardina         ###   ########.fr       */
+/*   Created: 2024-10-01 19:17:24 by raviolotto        #+#    #+#             */
+/*   Updated: 2024-10-01 19:17:24 by raviolotto       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
-#define SHRUBBERYCREATIONFORM_HPP
+#ifndef PRESIDENTIALPARDONFORM_HPP
+#define PRESIDENTIALPARDONFORM_HPP
 
 #include "AForm.hpp"
-#include <fstream>
 
-
-class ShrubberyCreationForm : public AForm
+class PresidentialPardonForm : public AForm
 {
 private:
 	std::string _target;
-	ShrubberyCreationForm();
+	PresidentialPardonForm();
 public:
-	ShrubberyCreationForm(std::string target);
-	ShrubberyCreationForm(const ShrubberyCreationForm& orig);
-	~ShrubberyCreationForm();
+	PresidentialPardonForm(std::string target);
+	PresidentialPardonForm(const PresidentialPardonForm& orig);
+	PresidentialPardonForm& operator=(const PresidentialPardonForm& rhs);
+	~PresidentialPardonForm();
 	std::string getTarget() const;
 
-	ShrubberyCreationForm& operator=(const ShrubberyCreationForm& rhs);
 	void execute(const Bureaucrat& bureaucrat) const;
 };
+
 #endif
