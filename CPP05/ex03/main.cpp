@@ -61,7 +61,6 @@ int main()
     AForm* form1;
     AForm* form2;
     AForm* form3;
-    AForm* form4;
 
     form1 = someRandomIntern.makeForm("shrubbery creation", "home");
     if (form1) {
@@ -83,8 +82,6 @@ int main()
         bossCarmine.executeForm(*form3);
         delete form3;
     }
-
-    form4 = someRandomIntern.makeForm("unknown form", "test");
 
     std::cout << "-----end test intern-----" << std::endl;
 	return 0;

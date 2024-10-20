@@ -15,17 +15,28 @@
 
 #include <string>
 #include <iostream>
+#include <limits>
 
 class ScalarConverter
 {
 	private:
-
+		static char		_c;
+		static int		_i;
+		static float	_f;
+		static double	_d;
 	public:
-		static void convert(std::string str);
 		ScalarConverter();
 		ScalarConverter(const ScalarConverter& orig);
 		~ScalarConverter();
 		ScalarConverter& operator=(const ScalarConverter& rhs);
+		static void convert(std::string str);
+		static void convertChar(char c);
+		static void convertInt(std::string str);
+		static void convertFloat(std::string str);
+		static void convertDouble(std::string str);
+		static bool isInt(std::string str);
+		static bool isFloat(std::string str);
+		static bool isDouble(std::string str);
 };
 
 #endif
