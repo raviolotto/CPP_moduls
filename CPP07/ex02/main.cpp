@@ -11,38 +11,57 @@
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Array.hpp"  // Assicurati di includere il file di intestazione della tua classe Array
+#include "Array.hpp"
+#include <string>
 
 int main() {
-    // Crea un array di interi con dimensione 5
-    Array<int> intArray(5);
+	Array<int> intArray(5);
 
-    // Inizializza l'array
-    for (unsigned int i = 0; i < intArray.size(); i++) {
-        intArray[i] = i + 1;  // Popola l'array con valori da 1 a 5
-    }
+	for (unsigned int i = 0; i < intArray.size(); i++) {
+		intArray[i] = i + 1;
+	}
 
-    // Stampa i valori dell'array
-    std::cout << "Valori nell'array di interi: ";
-    for (unsigned int i = 0; i < intArray.size(); i++) {
-        std::cout << intArray[i] << " ";
-    }
-    std::cout << std::endl;
+	std::cout << "Valori nell'array di interi: ";
+	for (unsigned int i = 0; i < intArray.size(); i++) {
+		std::cout << intArray[i] << " ";
+	}
+	std::cout << std::endl;
 
-    // Testa il costruttore di copia
-    Array<int> copiedArray = intArray;
-    std::cout << "Valori nell'array copiato: ";
-    for (unsigned int i = 0; i < copiedArray.size(); i++) {
-        std::cout << copiedArray[i] << " ";
-    }
-    std::cout << std::endl;
+	Array<int> copiedArray = intArray;
+	std::cout << "Valori nell'array copiato: ";
+	for (unsigned int i = 0; i < copiedArray.size(); i++) {
+		std::cout << copiedArray[i] << " ";
+	}
+	std::cout << std::endl;
 
-    // Testa il caso di accesso non valido
-    try {
-        std::cout << "Tentativo di accesso a un indice non valido: " << intArray[5] << std::endl;
-    } catch (const Array<int>::memoryexception& e) {
-        std::cerr << "Eccezione: " << e.what() << std::endl;
-    }
+	copiedArray[3] = 100;
+	Array<int> copiedCopiedArrey(copiedArray);
+	
+	std::cout << "Valori nell'array con costruttore copia: ";
+	for (unsigned int i = 0; i < copiedCopiedArrey.size(); i++) {
+		std::cout << copiedCopiedArrey[i] << " ";
+	}
+	std::cout << std::endl;
 
+	try {
+		std::cout << "Tentativo di accesso a un indice non valido: " << intArray[9] << std::endl;
+	} catch (const Array<int>::memoryexception& e) {
+		std::cerr << "Eccezione: " << e.what() << std::endl;
+	}
+
+	Array<std::string> stringus(5);
+	for(unsigned int i = 0; i < 5; i++){
+		stringus[i] = "abc";
+	}
+	for(unsigned int i = 0; i < 5; i++){
+		std::cout << stringus[i] << " ";
+	}
+	std::cout << std::endl;
+
+	Array<char> chars(5);
+	for(unsigned int i = 0; i < 5; i++){
+		chars[i] = 'a';
+	}
+	
 	return 0;
 }

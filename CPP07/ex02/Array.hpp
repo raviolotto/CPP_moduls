@@ -29,13 +29,13 @@ class Array
 			for(unsigned int i = 0; i < _lenght; i++)
 				_arr[i] = orig._arr[i];
 		};
-		Array& operator=(const Array& rhs){
+		Array<T>& operator=(const Array<T>& rhs){
 			if(this != &rhs){
 				delete[] _arr;
 				_arr = new T(rhs.size());
 				_lenght = rhs.size();
-				for(int i = 0; i < _lenght; i++)
-					_arr[i] = rhs._arr[i];
+				for(unsigned int i = 0; i < _lenght; i++)
+					_arr[i] = static_cast<T>(rhs._arr[i]);
 			}
 			return *this;
 		}
