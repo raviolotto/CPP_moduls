@@ -10,9 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = easyfind
+NAME = span
 
-SRC = main.cpp
+SRC = main.cpp Span.cpp Span.hpp
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
