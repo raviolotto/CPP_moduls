@@ -15,7 +15,7 @@
 #include <string>
 
 int main() {
-	Array<int> intArray(5);
+	::Array<int> intArray(5);
 
 	for (unsigned int i = 0; i < intArray.size(); i++) {
 		intArray[i] = i + 1;
@@ -62,6 +62,13 @@ int main() {
 	for(unsigned int i = 0; i < 5; i++){
 		chars[i] = 'a';
 	}
+	Array<int> empty;
+
+	empty = intArray;
+	for(unsigned int i = 0; i < 5; i++){
+		std::cout << empty[i] << " ";
+	}
+
 	
 	return 0;
 }

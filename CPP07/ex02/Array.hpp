@@ -23,7 +23,7 @@ class Array
 		unsigned int	_lenght;
 	public:
 		~Array(){delete []_arr;};
-		Array():_arr(new T()), _lenght(0){};
+		Array():_arr(new T[0]), _lenght(0){};
 		Array(unsigned int lenght):_arr(new T[lenght]), _lenght(lenght){};
 		Array(const Array& orig):_arr(new T[orig.size()]), _lenght(orig.size()){
 			for(unsigned int i = 0; i < _lenght; i++)

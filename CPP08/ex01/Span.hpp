@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 class Span{
 	public:
@@ -16,12 +17,13 @@ class Span{
 		void addNumber(long number);
 		unsigned int shortestSpan();
 		unsigned int longestSpan();
+		void addMultipleNumber(std::vector<long>::iterator begin, std::vector<long>::iterator end);
 
 		class noSpaceException : public std::exception{
 			public : 
 				virtual const char* what() const throw()
 				{
-					std::cout << "error no space" << std::endl;
+					return "error no space";
 				}
 		};
 
@@ -29,7 +31,7 @@ class Span{
 			public:
 				virtual const char* what() const throw()
 				{
-					std::cout << "no span foundable" << std::endl;
+					return "no span foundable" ;
 				}
 		};
 };

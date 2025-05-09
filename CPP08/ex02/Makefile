@@ -12,7 +12,7 @@
 
 NAME = exe
 
-SRC = main.cpp Span.cpp
+SRC = main.cpp
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
