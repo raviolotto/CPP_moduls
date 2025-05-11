@@ -38,7 +38,7 @@ void BitcoinExchange::makeCalc(const std::string &filepath)
 			std::cout << "bad input format is 'data | value' separetor | missing" << std::endl;
 		std::istringstream data(line.substr(0, pos));
 		float value = atof((line.substr(pos + 1)).c_str());
-		int year, month, day;
+		int year = 0, month = 0, day = 0;
 		char dash;
 		data >> year >> dash >> month >> dash >> day;
 		if(checkInput(year, month, day)){
