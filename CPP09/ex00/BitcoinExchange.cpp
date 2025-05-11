@@ -82,7 +82,10 @@ const std::map<int, float>& BitcoinExchange::getDatabase() const
 
 void BitcoinExchange::printResult(std::map<int, float>::iterator it, float value)
 {
-	std::cout << it->first << " => " << value << " = " << value * it->second << std::endl;
+	int year = it->first / 10000;
+	int month = (it->first % 10000) / 100;
+	int day = it->first % 100;
+	std::cout << year << "-" << month << "-" << day << " => " << value << " = " << value * it->second << std::endl;
 }
 
 void BitcoinExchange::findValue(int data, float& value)
