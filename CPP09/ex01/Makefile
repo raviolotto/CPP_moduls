@@ -10,9 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = BTC
+NAME = RPN
 
-SRC = main.cpp BitcoinExchange.cpp
+SRC = main.cpp RPN.cpp
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 

@@ -34,10 +34,17 @@ void BitcoinExchange::makeCalc(const std::string &filepath)
 		if (line.empty() || line == "\r")
 			continue;
 		size_t pos = line.find("|");
-		if (pos == std::string::npos)
+		if (pos == std::string::npos){
 			std::cout << "bad input format is 'data | value' separetor | missing" << std::endl;
+			continue;
+		}
 		std::istringstream data(line.substr(0, pos));
-		float value = atof((line.substr(pos + 1)).c_str());
+		char * retvalue;
+		float value = strtof(line.substr(pos + 1).c_str(), &retvalue);
+		if (*retvalue != '\0'){
+			std::cout << "error: not a valid number convert it is impossible" << std::endl; 
+			continue;
+		}
 		int year = 0, month = 0, day = 0;
 		char dash;
 		data >> year >> dash >> month >> dash >> day;
